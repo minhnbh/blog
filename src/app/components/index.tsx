@@ -56,3 +56,4 @@ export { default as InlineDropdownItem } from './InlineDropdown/item';
 export { default as Pagination } from './Pagination';
 export { default as TruncateText } from './TruncateText';
 export { default as DropFile } from './DropFile';
+export { default as PreLoader } from './PreLoader';

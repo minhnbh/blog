@@ -1,49 +1,138 @@
-import { Button } from 'app/components';
-import {
-  getAuthUser,
-  removeAccessToken,
-  removeAuthUser,
-  removeRefreshToken
-} from 'pages/Auth/helpers';
 import React from 'react';
-import { Container, Image, Nav, Navbar } from 'react-bootstrap';
-import { FaSignOutAlt } from 'react-icons/fa';
 
 const Header: React.FC = () => {
-  const profile = getAuthUser();
-
-  const handleLogout = () => {
-    removeAuthUser();
-    removeAccessToken();
-    removeRefreshToken();
-    window.location.href = '/login';
-  };
-
   return (
-    <Navbar expand={true} fixed="top" className="header-navigation-container">
-      <Container fluid>
-        <Navbar.Brand className="flex-center justify-content-start ml-16">
-          <Image src="images/logo192.png" />
-          <div className="fs-20 fw-700 ml-8 color-primary-red">
-            Trang quản trị
+    <header className="header-default">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-xl">
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item dropdown active">
+                <a className="nav-link dropdown-toggle" href="index.html">
+                  Home
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="index.html">
+                      Magazine
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="personal.html">
+                      Personal
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="personal-alt.html">
+                      Personal Alt
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="minimal.html">
+                      Minimal
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="classic.html">
+                      Classic
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="category.html">
+                  Lifestyle
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="category.html">
+                  Inspiration
+                </a>
+              </li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#">
+                  Pages
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a className="dropdown-item" href="category.html">
+                      Category
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="blog-single.html">
+                      Blog Single
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="blog-single-alt.html">
+                      Blog Single Alt
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="about.html">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="contact.html">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="contact.html">
+                  Contact
+                </a>
+              </li>
+            </ul>
           </div>
-        </Navbar.Brand>
-        <Nav className="justify-content-end w-50">
-          <div className="w-50 d-flex align-items-center justify-content-end">
-            <Navbar.Text>{profile?.fullName}</Navbar.Text>
+          <div className="header-right">
+            <ul className="social-icons list-unstyled list-inline mb-0">
+              <li className="list-inline-item">
+                <a href="#">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#">
+                  <i className="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#">
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#">
+                  <i className="fab fa-pinterest"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#">
+                  <i className="fab fa-medium"></i>
+                </a>
+              </li>
+              <li className="list-inline-item">
+                <a href="#">
+                  <i className="fab fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+            <div className="header-buttons">
+              <button className="search icon-button">
+                <i className="icon-magnifier"></i>
+              </button>
+              <button className="burger-menu icon-button">
+                <span className="burger-icon"></span>
+              </button>
+            </div>
           </div>
-          <Button
-            variant="secondary"
-            size="sm"
-            className="mx-24"
-            onClick={handleLogout}
-          >
-            <span className="mr-4 d-none d-lg-block">Đăng xuất</span>
-            <FaSignOutAlt size={14} />
-          </Button>
-        </Nav>
-      </Container>
-    </Navbar>
+        </div>
+      </nav>
+    </header>
   );
 };
 

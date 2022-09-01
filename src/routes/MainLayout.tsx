@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 import Header from 'pages/_commons/Header';
-import Sidebar from 'pages/_commons/Sidebar';
-import { Outlet } from 'react-router-dom';
-import SimpleBar from 'simplebar-react';
+// import Sidebar from 'pages/_commons/Sidebar';
+// import { Outlet } from 'react-router-dom';
+// import SimpleBar from 'simplebar-react';
 import classnames from 'classnames';
 
 interface IMainLayoutProps {
@@ -14,7 +14,7 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ className, children }) => {
   return (
     <div className={classnames('h-100', className)}>
       <Header />
-      <div className="d-flex h-100">
+      {/* <div className="d-flex h-100">
         <Sidebar />
         <div className="flex-1 pl-24">
           <SimpleBar>
@@ -22,7 +22,7 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ className, children }) => {
             <Outlet />
           </SimpleBar>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

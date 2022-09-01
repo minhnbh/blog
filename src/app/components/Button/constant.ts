@@ -1,4 +1,5 @@
 const btnVariants = <const>[
+  'default',
   'success',
   'primary',
   'secondary',
