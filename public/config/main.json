@@ -1,0 +1,91 @@
+{
+  "api": {
+    "auth": {
+      "signIn": "users/login",
+      "getProfile": "users/me",
+      "updateProfile": "users/me",
+      "changePassword": "users/me/password"
+    },
+    "sim": {
+      "searchSim": "sims",
+      "getMySim": "sims/me",
+      "saveSims": "sims",
+      "approveSim": "admins/sims/{{_id}}",
+      "hideSim": "admins/sims/{{_id}}",
+      "rejectSim": "admins/sims/{{_id}}"
+    },
+    "user": {
+      "getBuyerList": "admins/users",
+      "getSellerList": "admins/sellers",
+      "getAdminList": "admins",
+      "addAdmin": "admins",
+      "updateAdmin": "admins/{{userId}}",
+      "upgrade": "admins/users/{{_id}}",
+      "deactivateBuyer": "admins/buyer/{{_id}}",
+      "deactivateSeller": "admins/seller/{{_id}}",
+      "deactivateAdmin": "admins/{{_id}}"
+    },
+    "order": {
+      "getOrderList": "admins/orders",
+      "finishOrder": "admins/orders/{{orderId}}",
+      "cancelOrder": "admins/orders/{{orderId}}"
+    },
+    "news": {
+      "getNews": "news",
+      "addNews": "news",
+      "updateNews": "news/{{newsId}}",
+      "deleteNews": "news/{{newsId}}"
+    },
+    "ads": {
+      "getAdsList": "ads",
+      "addAds": "ads",
+      "updateAds": "ads/{{adsId}}",
+      "deleteAds": "ads/{{adsId}}"
+    },
+    "collaborator": {
+      "getGroups": "groups",
+      "saveGroup": "groups",
+      "updateGroup": "groups/{{_id}}",
+      "getGroupById": "groups/{{_id}}",
+      "getCollaboratorsByGroup": "groups/{{_id}}/users",
+      "deleteCollaborator": "collaborators/{{_id}}"
+    },
+    "dashboard": {
+      "getTotalView": "sims/statics/totalsView",
+      "getSimStatistics": "sims/statics"
+    },
+    "notification": {
+      "getNotifications": "notices/admin",
+      "pushNotification": "notices"
+    },
+    "discount": {
+      "getMyDiscount": "discounts",
+      "saveRangeDiscount": "discounts",
+      "saveAllDiscount": "discounts/all"
+    },
+    "userExchange": {
+      "getContacts": "exchange",
+      "approve": "exchange/{{userId}}",
+      "reject": "exchange/{{userId}}"
+    },
+    "common": {
+      "getCities": "users/provinces"
+    },
+    "appVersion": {
+      "getAndroidAppVersion": "version/android",
+      "getIosAppVersion": "version/ios",
+      "saveAndroidAppVersion": "version/android",
+      "saveIosAppVersion": "version/ios"
+    },
+    "feedback": {
+      "getFeedbacks": "feedbacks",
+      "removeFeedback": "feedbacks/{{_id}}"
+    },
+    "bankAccount": {
+      "getBankAccounts": "",
+      "getBankAccountOrders": "",
+      "removeBankAccount": "",
+      "updateBankAccount": ""
+    }
+  }
+}
