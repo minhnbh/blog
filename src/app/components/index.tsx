@@ -53,7 +53,6 @@ export * from './Modal';
 export { default as InlineDropdown } from './InlineDropdown';
 export { default as InlineDropdownItem } from './InlineDropdown/item';
 
-export { default as Speedometer } from './Speedometer';
 export { default as Pagination } from './Pagination';
 export { default as TruncateText } from './TruncateText';
 export { default as DropFile } from './DropFile';

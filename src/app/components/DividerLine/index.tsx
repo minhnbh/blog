@@ -1,8 +1,9 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 export interface IDividerLineProps {
   className?: string;
+  children?: ReactNode;
 }
 
 const DividerLine: React.FC<IDividerLineProps> = ({ className, children }) => {

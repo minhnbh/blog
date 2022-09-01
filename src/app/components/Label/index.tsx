@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { FormLabel as FormLabelBase } from 'react-bootstrap';
 import classes from 'app/utils/classes';
 import classnames from 'classnames';
@@ -9,6 +9,7 @@ export interface FormLabelProps {
   required?: boolean;
   error?: MagicKeyValue;
   className?: string;
+  children?: ReactNode;
 }
 
 const FormLabel: React.FC<FormLabelProps> = ({

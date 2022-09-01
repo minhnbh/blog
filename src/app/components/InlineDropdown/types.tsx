@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 export interface InlineDropdownProps {
   label: string;
@@ -8,6 +8,7 @@ export interface InlineDropdownProps {
   values?: MagicKeyValue[];
   footer?: ReactElement | null;
   onChange?: (values: MagicKeyValue[]) => void;
+  children?: ReactNode;
 }
 
 export type InlineDropdownMenuProps = {

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import TextTruncate, { TextTruncateProps } from 'react-text-truncate';
 
-export interface ITruncateText extends TextTruncateProps {}
+export interface ITruncateText extends TextTruncateProps {
+  children?: ReactNode;
+}
 
 const TruncateText: React.FC<ITruncateText> = ({
   children,

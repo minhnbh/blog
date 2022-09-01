@@ -1,5 +1,11 @@
 import { uniqueId } from 'lodash';
-import React, { ReactElement, useEffect, useState, useRef } from 'react';
+import React, {
+  ReactElement,
+  useEffect,
+  useState,
+  useRef,
+  ReactNode
+} from 'react';
 import { Dropdown, Form } from 'react-bootstrap';
 
 export interface IInlineDropdownItemProps {
@@ -9,6 +15,7 @@ export interface IInlineDropdownItemProps {
   value?: MagicKeyValue;
   suffix?: ReactElement;
   className?: string;
+  children?: ReactNode;
 }
 
 const InlineDropdownItem: React.FC<IInlineDropdownItemProps> = props => {

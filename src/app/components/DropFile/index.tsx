@@ -2,7 +2,7 @@ import { COLORS } from 'app/constants/common';
 import classNames from 'classnames';
 import { isArray, isEmpty, isUndefined } from 'lodash';
 import If from 'pages/_commons/If';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Image } from 'react-bootstrap';
 import { DropzoneOptions, FileRejection, useDropzone } from 'react-dropzone';
 import { FaFileUpload, FaTimes } from 'react-icons/fa';
@@ -15,6 +15,7 @@ export interface IDropFile extends DropzoneOptions {
   containerClassName?: string;
   onError?: (files: FileRejection[]) => void;
   onDelete?: () => void;
+  children?: ReactNode;
 }
 
 const DropFile: React.FC<IDropFile> = ({

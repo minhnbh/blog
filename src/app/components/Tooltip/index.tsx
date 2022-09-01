@@ -12,6 +12,7 @@ export interface ITooltipProps {
   variant?: Variant;
   className?: string;
   trigger?: OverlayTriggerType;
+  children?: ReactElement;
 }
 
 const Tooltip: React.FC<ITooltipProps> = ({

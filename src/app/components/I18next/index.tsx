@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { ReactNode, useEffect, useRef } from 'react';
 import i18next from 'i18next';
 import {
   initReactI18next,
@@ -16,6 +16,7 @@ export declare type Resource = {
 export interface II18nextProvider {
   resource?: Resource;
   initReactI18nextProps?: boolean;
+  children?: ReactNode;
 }
 
 const I18next: React.FC<II18nextProvider> = ({
