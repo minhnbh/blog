@@ -12,7 +12,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   selected?: boolean;
 }
 
-const Button: React.RefForwardingComponent<HTMLButtonElement, ButtonProps> = (
+const Button: React.ForwardRefRenderFunction<HTMLButtonElement, ButtonProps> = (
   {
     variant = 'default',
     size,

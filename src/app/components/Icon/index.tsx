@@ -9,7 +9,7 @@ export interface IconProps
   color?: string;
 }
 
-const Icon: React.RefForwardingComponent<HTMLSpanElement, IconProps> = (
+const Icon: React.ForwardRefRenderFunction<HTMLSpanElement, IconProps> = (
   { name, className, color, id, ...props },
   ref
 ) => {
