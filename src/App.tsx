@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import './App.css';
 import DataApiContext from 'app/components/core/contexts/DataAPIContext';
 import AppContext from 'app/components/core/AppContext';
-import I18next from 'app/components/I18next';
 import { IconContext } from 'react-icons';
 import { BrowserRouter } from 'react-router-dom';
 import AppContainer from 'AppContainer';
 import { reducerMappingList } from 'storeConfigs';
 import axios from 'axios';
+import I18next from 'pages/_commons/I18nextProvider';
 
 const App: React.FC = () => {
   const handleGetConfigs = async () => {
