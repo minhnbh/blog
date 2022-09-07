@@ -4,6 +4,7 @@ import Header from 'pages/_commons/Header';
 // import { Outlet } from 'react-router-dom';
 // import SimpleBar from 'simplebar-react';
 import classnames from 'classnames';
+import EditorPick from 'pages/EditorPick/EditorPick';
 
 interface IMainLayoutProps {
   className?: string;
@@ -23,6 +24,15 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ className, children }) => {
           </SimpleBar>
         </div>
       </div> */}
+      <section className="main-content">
+        <div className="container-xl">
+          <div className="row gy-4">
+            <div className="col-lg-8">
+              <EditorPick />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
