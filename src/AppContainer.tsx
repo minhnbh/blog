@@ -2,8 +2,8 @@ import LazyLoadingFallback from 'app/components/LazyLoadingFallback';
 import ConfirmModal from 'pages/_commons/ConfirmModal';
 import ToastControl from 'pages/_commons/Toast';
 import React, { Fragment, Suspense, useCallback } from 'react';
-import { Route } from 'react-router-dom';
-import { IRoute } from 'routes/constants';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { IRoute, MAIN_NAVIGATION } from 'routes/constants';
 import MainLayout from 'routes/MainLayout';
 
 const AppContainer: React.FC = () => {
@@ -47,7 +47,12 @@ const AppContainer: React.FC = () => {
               </MainLayout>
             </div>
           )} */}
-        <MainLayout></MainLayout>
+        <MainLayout>
+          <Routes>
+            {RouteView(MAIN_NAVIGATION)}
+            <Route path="/" element={<Navigate to={'/home'} replace />} />
+          </Routes>
+        </MainLayout>
       </main>
     </Fragment>
   );
