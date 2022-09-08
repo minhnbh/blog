@@ -1,10 +1,9 @@
 import React, { ReactNode } from 'react';
 import Header from 'pages/_commons/Header';
 // import Sidebar from 'pages/_commons/Sidebar';
-// import { Outlet } from 'react-router-dom';
-// import SimpleBar from 'simplebar-react';
+import { Outlet } from 'react-router-dom';
+import SimpleBar from 'simplebar-react';
 import classnames from 'classnames';
-import EditorPick from 'pages/EditorPick/EditorPick';
 
 interface IMainLayoutProps {
   className?: string;
@@ -15,24 +14,12 @@ const MainLayout: React.FC<IMainLayoutProps> = ({ className, children }) => {
   return (
     <div className={classnames('h-100', className)}>
       <Header />
-      {/* <div className="d-flex h-100">
-        <Sidebar />
-        <div className="flex-1 pl-24">
-          <SimpleBar>
-            <div className="px-8 pb-8 pt-24">{children}</div>
-            <Outlet />
-          </SimpleBar>
-        </div>
-      </div> */}
-      <section className="main-content">
-        <div className="container-xl">
-          <div className="row gy-4">
-            <div className="col-lg-8">
-              <EditorPick />
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="flex-1">
+        <SimpleBar>
+          <div className="px-8 pb-8 pt-24">{children}</div>
+          <Outlet />
+        </SimpleBar>
+      </div>
     </div>
   );
 };

@@ -1,10 +1,4 @@
-export interface IEditorPost {
-  key: number;
-  path: string;
-  title: string;
-  date: string;
-  post: string;
-}
+import { IEditorPost } from './types';
 
 export const EDITOR_POST: IEditorPost[] = [
   {
