@@ -87,7 +87,7 @@ export const TRENDING_POST: IPost[] = [
     pathCategory: 'category.html',
     date: '29 March 2021',
     image:
-      'https://images.unsplash.com/photo-1524648365428-6bbe1d37c18a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
+      'https://images.unsplash.com/photo-1661961112134-fbce0fdf3d99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80',
     description:
       'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy'
   },
@@ -102,7 +102,7 @@ export const TRENDING_POST: IPost[] = [
     pathCategory: 'category.html',
     date: '29 March 2021',
     image:
-      'https://images.unsplash.com/photo-1575026469075-99e9e3433e72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+      'https://images.unsplash.com/photo-1662503792746-2e1d3af41b7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=792&q=80',
     description:
       'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy'
   }

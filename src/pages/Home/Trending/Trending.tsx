@@ -131,7 +131,7 @@ const Trending: React.FC = () => {
               <p className="excerpt mb-0">{secondeItem.description}</p>
             </div>
 
-            {data.slice(3, 5).map(item => (
+            {data.slice(4, 6).map(item => (
               <div
                 className="post post-list-sm square before-seperator"
                 key={item.key}
