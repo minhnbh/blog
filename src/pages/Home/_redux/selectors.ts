@@ -27,3 +27,8 @@ export const selectRecent = createSelector(
   getHomeState,
   (data: IHomeState) => data.recent
 );
+
+export const selectTrending = createSelector(
+  getHomeState,
+  (data: IHomeState) => data.trending
+);
