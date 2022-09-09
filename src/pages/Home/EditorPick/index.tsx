@@ -9,6 +9,7 @@ import EditorPickThumb from './EditorPickThumb';
 const EditorPick: React.FC = () => {
   const dispatch = useDispatch();
   const { data, loading }: IEditorPickedPosts = useSelector(selectEditorPick);
+  console.log(data);
 
   useEffect(() => {
     dispatch(homeActions.getEditorPickedPosts());
@@ -25,23 +26,24 @@ const EditorPick: React.FC = () => {
           <div className="col-sm-6">
             <EditorPickThumb />
           </div>
+
           <div className="col-sm-6">
-            {data.map(item => (
+            {data.slice(1).map(item => (
               <div className="post post-list-sm square" key={item.key}>
                 <div className="thumb rounded">
-                  <a href={item.path}>
+                  <a href={item.pathTitle}>
                     <div className="inner">
                       <img
-                        src={item.post}
+                        src={item.image}
                         alt="post-title"
-                        className="post-editor-tabs"
+                        className="post-editor-tabs image"
                       />
                     </div>
                   </a>
                 </div>
                 <div className="details clearfix">
                   <h6 className="post-title my-0">
-                    <a href={item.path}>{item.title}</a>
+                    <a href={item.pathTitle}>{item.title}</a>
                   </h6>
                   <ul className="meta list-inline mt-1 mb-0">
                     <li className="list-inline-item">{item.date}</li>

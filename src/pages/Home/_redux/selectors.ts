@@ -7,3 +7,8 @@ export const selectEditorPick = createSelector(
   getHomeState,
   (data: IHomeState) => data.editorPick
 );
+
+export const selectInspiration = createSelector(
+  getHomeState,
+  (data: IHomeState) => data.inspiration
+);

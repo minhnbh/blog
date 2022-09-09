@@ -3666,21 +3666,30 @@ button:focus {
 /*=================================================================*/
 /*                      ADDITION                             
 /*=================================================================*/
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .post-editor {
   width: 300px;
   height: 200px;
 }
 
-.author {
+.post-author {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
+  margin-right: 10px;
 }
 .post-editor-tabs {
   width: 110px;
   height: 80px;
-  object-fit: cover;
-  object-position: center;
+}
+
+.post-large {
+  width: 350px;
+  height: 300px;
 }
