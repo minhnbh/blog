@@ -7,11 +7,13 @@ import HeroPopular from './HeroPopular';
 
 const Hero: React.FC = () => {
   const [activeTab, setActiveTab] = useState('popular');
+  const POPULAR = 'popular';
+  const RECENT = 'recent';
   const handleClickPopular = () => {
-    setActiveTab('popular');
+    setActiveTab(POPULAR);
   };
   const handleClickRecent = () => {
-    setActiveTab('recent');
+    setActiveTab(RECENT);
   };
   return (
     <section id="hero">
@@ -27,7 +29,7 @@ const Hero: React.FC = () => {
                 <li className="nav-item">
                   <button
                     className={classNames('nav-link', {
-                      active: activeTab === 'popular'
+                      active: activeTab === POPULAR
                     })}
                     id="popular-tab"
                     type="button"
@@ -39,7 +41,7 @@ const Hero: React.FC = () => {
                 <li className="nav-item">
                   <button
                     className={classNames('nav-link', {
-                      active: activeTab === 'recent'
+                      active: activeTab === RECENT
                     })}
                     id="recent-tab"
                     type="button"
@@ -51,7 +53,7 @@ const Hero: React.FC = () => {
               </ul>
 
               <div className="tab-content" id="postsTabContent">
-                {activeTab === 'popular' ? <HeroPopular /> : <HeroRecent />}
+                {activeTab === POPULAR ? <HeroPopular /> : <HeroRecent />}
               </div>
             </div>
           </div>
