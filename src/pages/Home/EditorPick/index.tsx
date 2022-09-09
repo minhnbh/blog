@@ -9,7 +9,6 @@ import EditorPickThumb from './EditorPickThumb';
 const EditorPick: React.FC = () => {
   const dispatch = useDispatch();
   const { data, loading }: IEditorPickedPosts = useSelector(selectEditorPick);
-  console.log(data);
 
   useEffect(() => {
     dispatch(homeActions.getEditorPickedPosts());

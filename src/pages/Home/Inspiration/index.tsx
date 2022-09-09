@@ -11,7 +11,6 @@ import { homeActions } from '../_redux';
 const Inspiration: React.FC = () => {
   const dispatch = useDispatch();
   const { data }: IInspirationPosts = useSelector(selectInspiration);
-  console.log(data);
 
   useEffect(() => {
     dispatch(homeActions.getInspirationPosts());
@@ -71,12 +70,12 @@ const Inspiration: React.FC = () => {
                     </ul>
                   </div>
                   <a href="blog-single.html">
-                    <div className="thumb rounded post-large ">
+                    <div className="thumb rounded post-medimum ">
                       <div className="inner">
                         <img
                           src={item.image}
                           alt="thumb"
-                          className="post-large image"
+                          className="post-medimum image"
                         />
                       </div>
                     </div>

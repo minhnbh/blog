@@ -1,6 +1,9 @@
 export interface IHomeState {
   editorPick: IEditorPickedPosts;
   inspiration: IInspirationPosts;
+  postlarge: IHeroPostLarge;
+  popular: IHeroPopular;
+  recent: IHeroRecent;
 }
 
 export interface IEditorPickedPosts {
@@ -35,5 +38,35 @@ export interface IInspirationPosts {
 }
 
 export interface IGetInspirationPostsPayload {
+  data: IPost[];
+}
+
+/*=================================================================*/
+/*                      HERO SECTION                            
+/*=================================================================*/
+
+export interface IHeroPostLarge {
+  data: IPost;
+  loading: boolean;
+}
+
+export interface IGetHeroPostLargePayload {
+  data: IPost;
+}
+
+export interface IHeroPopular {
+  data: IPost[];
+  loading: boolean;
+}
+export interface IGetHeroPopularPayload {
+  data: IPost[];
+}
+
+export interface IHeroRecent {
+  data: IPost[];
+  loading: boolean;
+}
+
+export interface IGetHeroRecentPayload {
   data: IPost[];
 }
