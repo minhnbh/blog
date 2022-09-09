@@ -4,6 +4,8 @@ import Header from 'pages/_commons/Header';
 import { Outlet } from 'react-router-dom';
 import SimpleBar from 'simplebar-react';
 import classnames from 'classnames';
+// import EditorPick from 'pages/EditorPick/EditorPick';
+// import Inspiration from 'pages/Inspiration/Inspiration';
 
 interface IMainLayoutProps {
   className?: string;
