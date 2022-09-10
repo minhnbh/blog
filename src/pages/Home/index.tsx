@@ -3,8 +3,9 @@ import EditorPick from './EditorPick';
 import Hero from './HeroSection';
 import Inspiration from './Inspiration';
 import LatestPosts from './Latest';
+import Popular from './Popular';
 import Trending from './Trending';
-import WidgetAbout from './WidgetAbout/WidgetAbout';
+import WidgetAbout from './WidgetAbout';
 
 const Home: React.FC = () => {
   return (
@@ -27,6 +28,8 @@ const Home: React.FC = () => {
             <div className="col-lg-4">
               <div className="side-bar">
                 <WidgetAbout />
+                <div className="mb-5"></div>
+                <Popular />
               </div>
             </div>
           </div>
