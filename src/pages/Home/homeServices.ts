@@ -1,3 +1,4 @@
+import { CATEGORY } from './Categories/constants';
 import { EDITOR_POST } from './EditorPick/constants';
 import {
   HERO_POPULAR_POST,
@@ -5,6 +6,8 @@ import {
   HERO_RECENT_POST
 } from './HeroSection/constants';
 import { INSPIRATION_POST } from './Inspiration/constants';
+import { LATEST_POST } from './Latest/constants';
+import { TRENDING_POST } from './Trending/constants';
 
 const homeServices = {
   getEditorPosts: () => {
@@ -30,6 +33,21 @@ const homeServices = {
   getHeroRecent: () => {
     return Promise.resolve({
       data: HERO_RECENT_POST
+    });
+  },
+  getTrending: () => {
+    return Promise.resolve({
+      data: TRENDING_POST
+    });
+  },
+  getLatestPosts: () => {
+    return Promise.resolve({
+      data: LATEST_POST
+    });
+  },
+  getCategory: () => {
+    return Promise.resolve({
+      data: CATEGORY
     });
   }
 };
