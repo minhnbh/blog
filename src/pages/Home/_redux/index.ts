@@ -11,6 +11,8 @@ import {
   getInspirationPosts,
   getInspirationPostsBuilder
 } from './getInspirationPosts';
+import { getLatestPosts, getLatestPostsBuilder } from './getLatestPosts';
+import { getTrending, getTrendingBuilder } from './getTrending';
 
 const initialState: IHomeState = {
   editorPick: {
@@ -32,6 +34,14 @@ const initialState: IHomeState = {
   recent: {
     data: [],
     loading: false
+  },
+  trending: {
+    data: [],
+    loading: false
+  },
+  latest: {
+    data: [],
+    loading: false
   }
 };
 
@@ -45,6 +55,8 @@ const { actions, reducer } = createSlice({
     getHeroPostLargeBuilder(builder);
     getHeroPopularBuilder(builder);
     getHeroRecentBuilder(builder);
+    getTrendingBuilder(builder);
+    getLatestPostsBuilder(builder);
   }
 });
 
@@ -54,7 +66,9 @@ const combineActions = {
   getInspirationPosts,
   getHeroPostLarge,
   getHeroPopular,
-  getHeroRecent
+  getHeroRecent,
+  getTrending,
+  getLatestPosts
 };
 
 export { combineActions as homeActions, reducer };

@@ -4,6 +4,8 @@ export interface IHomeState {
   postlarge: IHeroPostLarge;
   popular: IHeroPopular;
   recent: IHeroRecent;
+  trending: ITrending;
+  latest: ILatestPosts;
 }
 
 export interface IEditorPickedPosts {
@@ -68,5 +70,28 @@ export interface IHeroRecent {
 }
 
 export interface IGetHeroRecentPayload {
+  data: IPost[];
+}
+
+/*=================================================================*/
+/*                      TRENDING                           
+/*=================================================================*/
+
+export interface ITrending {
+  data: IPost[];
+  loading: boolean;
+}
+export interface IGetTrendingPayload {
+  data: IPost[];
+}
+
+/*=================================================================*/
+/*                      LATEST POSTS                            
+/*=================================================================*/
+export interface ILatestPosts {
+  data: IPost[];
+  loading: boolean;
+}
+export interface IGetLatestPostsPayload {
   data: IPost[];
 }

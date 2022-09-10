@@ -2,6 +2,8 @@ import React from 'react';
 import EditorPick from './EditorPick';
 import Hero from './HeroSection';
 import Inspiration from './Inspiration';
+import LatestPosts from './Latest';
+import Trending from './Trending';
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +15,12 @@ const Home: React.FC = () => {
           <div className="col-lg-8">
             <EditorPick />
             <div className="mb-5"></div>
+            <Trending />
+            <div className="mb-5"></div>
             <Inspiration />
+            <div className="mb-5"></div>
+            <LatestPosts />
+            <div className="mb-5"></div>
           </div>
         </div>
       </div>

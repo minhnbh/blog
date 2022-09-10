@@ -8,7 +8,7 @@ import { selectEditorPick } from '../_redux/selectors';
 const EditorPickThumb: React.FC = () => {
   const dispatch = useDispatch();
   const { data, loading }: IEditorPickedPosts = useSelector(selectEditorPick);
-  console.log(data);
+  const firstItem = data[0] || {};
 
   useEffect(() => {
     dispatch(homeActions.getEditorPickedPosts());
@@ -17,18 +17,18 @@ const EditorPickThumb: React.FC = () => {
     <div className={classNames('post', { loading })}>
       <div className="thumb rounded">
         <a
-          href={data[0]?.pathCategory}
+          href={firstItem.pathCategory}
           className="category-badge position-absolute"
         >
-          {data[0]?.category}
+          {firstItem.category}
         </a>
         <span className="post-format">
           <i className="icon-picture"></i>
         </span>
-        <a href={data[0]?.pathTitle}>
+        <a href={firstItem.pathTitle}>
           <div className="inner">
             <img
-              src={data[0]?.image}
+              src={firstItem.image}
               alt="post-title"
               className="post-editor image"
             />
@@ -39,19 +39,19 @@ const EditorPickThumb: React.FC = () => {
         <li className="list-inline-item">
           <a href="#">
             <img
-              src={data[0]?.imageAuthor}
+              src={firstItem.imageAuthor}
               className="post-author image"
               alt="author"
             />
-            {data[0]?.author}
+            {firstItem.author}
           </a>
         </li>
-        <li className="list-inline-item">{data[0]?.date}</li>
+        <li className="list-inline-item">{firstItem.date}</li>
       </ul>
       <h5 className="post-title mb-3 mt-3">
-        <a href={data[0]?.pathTitle}>{data[0]?.title}</a>
+        <a href={firstItem.pathTitle}>{firstItem.title}</a>
       </h5>
-      <p className="excerpt mb-0">{data[0]?.description}</p>
+      <p className="excerpt mb-0">{firstItem.description}</p>
     </div>
   );
 };
