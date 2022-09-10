@@ -1,9 +1,9 @@
 import { ActionReducerMapBuilder, createAsyncThunk } from '@reduxjs/toolkit';
 import homeServices from '../homeServices';
-import { IGetTrending, IHomeState } from '../types';
+import { IGetTrendingPayload, IHomeState } from '../types';
 
 export const getTrending = createAsyncThunk<
-  IGetTrending,
+  IGetTrendingPayload,
   undefined,
   ThunkAPIConfig
 >('home/getTrending', async (_, { rejectWithValue }) => {
