@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { IHomeState } from '../types';
+import { getCategory, getCategoryBuilder } from './getCategory';
 import {
   getEditorPickedPosts,
   getEditorPickedPostsBuilder
@@ -42,6 +43,10 @@ const initialState: IHomeState = {
   latest: {
     data: [],
     loading: false
+  },
+  categories: {
+    data: [],
+    loading: false
   }
 };
 
@@ -57,6 +62,7 @@ const { actions, reducer } = createSlice({
     getHeroRecentBuilder(builder);
     getTrendingBuilder(builder);
     getLatestPostsBuilder(builder);
+    getCategoryBuilder(builder);
   }
 });
 
@@ -68,7 +74,8 @@ const combineActions = {
   getHeroPopular,
   getHeroRecent,
   getTrending,
-  getLatestPosts
+  getLatestPosts,
+  getCategory
 };
 
 export { combineActions as homeActions, reducer };

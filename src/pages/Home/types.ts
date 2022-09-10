@@ -6,6 +6,7 @@ export interface IHomeState {
   recent: IHeroRecent;
   trending: ITrending;
   latest: ILatestPosts;
+  categories: ICategories;
 }
 
 export interface IEditorPickedPosts {
@@ -94,4 +95,21 @@ export interface ILatestPosts {
 }
 export interface IGetLatestPostsPayload {
   data: IPost[];
+}
+
+/*=================================================================*/
+/*                      EXPLORE TOPICS                           
+/*=================================================================*/
+export interface ICategory {
+  name: string;
+  quality: number;
+}
+
+export interface ICategories {
+  data: ICategory[];
+  loading: boolean;
+}
+
+export interface IGetCategoryPayload {
+  data: ICategory[];
 }

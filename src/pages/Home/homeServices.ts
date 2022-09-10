@@ -1,3 +1,4 @@
+import { CATEGORY } from './Categories/constants';
 import { EDITOR_POST } from './EditorPick/constants';
 import {
   HERO_POPULAR_POST,
@@ -42,6 +43,11 @@ const homeServices = {
   getLatestPosts: () => {
     return Promise.resolve({
       data: LATEST_POST
+    });
+  },
+  getCategory: () => {
+    return Promise.resolve({
+      data: CATEGORY
     });
   }
 };

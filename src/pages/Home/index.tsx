@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
+import Categories from './Categories';
 import EditorPick from './EditorPick';
 import Hero from './HeroSection';
 import Inspiration from './Inspiration';
 import LatestPosts from './Latest';
 import Popular from './Popular';
+import TagClouds from './TagClouds';
 import Trending from './Trending';
 import WidgetAbout from './WidgetAbout';
 
@@ -30,6 +32,10 @@ const Home: React.FC = () => {
                 <WidgetAbout />
                 <div className="mb-5"></div>
                 <Popular />
+                <div className="mb-5"></div>
+                <Categories />
+                <div className="mb-5"></div>
+                <TagClouds />
               </div>
             </div>
           </div>

@@ -37,3 +37,8 @@ export const selectLatest = createSelector(
   getHomeState,
   (data: IHomeState) => data.latest
 );
+
+export const selectCategory = createSelector(
+  getHomeState,
+  (data: IHomeState) => data.categories
+);
